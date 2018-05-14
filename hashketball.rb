@@ -137,6 +137,7 @@ end
 def find_the_team(team_name)
   teams.find {|team| team.fetch(:team_name) == team_name} #returns all team data of team_name if found
 end
+
 def num_points_scored(name)
   player = find_the_player(name) 
   player.fetch(:points) #returns points data
@@ -162,6 +163,10 @@ end
 
 def player_stats(player_name)
   find_the_player(player_name)
+end
+
+def player_biggest_shoe_size
+  players.max_by{|player, stats| stats.fetch(:shoe)}[1]
 end
 
 def big_shoe_rebounds
