@@ -131,10 +131,8 @@ def find_the_player(name)
 end
 
 def teams
-  game_hash.values
+  game_hash.values #returns all team data
 end
-
-puts teams
 
 def num_points_scored(name)
   player = find_the_player(name) 
