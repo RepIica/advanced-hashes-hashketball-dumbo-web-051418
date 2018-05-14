@@ -135,9 +135,9 @@ def teams
 end
 
 def find_the_team(team_name)
-  teams.find {|team| team.fetch(:team_name) == team_name}
+  teams.find {|team| team.fetch(:team_name) == team_name} #returns team name
 end
-
+puts find_the_team("Brooklyn Nets")
 def num_points_scored(name)
   player = find_the_player(name) 
   player.fetch(:points) #returns points data
